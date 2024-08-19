@@ -11,3 +11,12 @@ mlops practice solo
 
 # flake8 실행 명령어
 > docker-compose run --rm app sh -c "flake8"
+
+# admin 계정 생성
+> docker-compose run --rm app sh -c "python manage.py migrate"
+> docker-compose run --rm app sh -c "python manage.py createsuperuser"
+
+# git push
+> git add .
+> git commit -m "Django settings & workflow floder name update"
+> git push -u origin main
